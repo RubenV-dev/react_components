@@ -4,6 +4,7 @@ import DateBoxTS from './Component/date_box_ts.tsx';
 import FormBox from './Component/form_box.js';
 import InputAndDisplay from './Component/input_and_display.js';
 import ShowData from './Component/showdata.js';
+import Filter from './Component/filter.js';
 
 function App() {
   return (
@@ -26,6 +27,10 @@ function App() {
         <div className="component">
           <h2>Show Data</h2>
           <ShowData/>
+        </div>
+        <div className="component">
+          <h2>Filter Practice</h2>
+          <Filter/>
         </div>
       </header>
     </div>
