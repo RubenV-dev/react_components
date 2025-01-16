@@ -8,17 +8,16 @@ const InputAndDisplay = () => {
         event.preventDefault()
         let formData = new FormData(event.target)
         let lettersToAdd = formData.get("letters-to-add").replace(/\s/g, "")
-        // alert(`You are adding: ${lettersToAdd}`)
-        console.log(`Current State: ${state}`)
         setState(state = state += lettersToAdd)
+        
     }
     return (
         <div>
-            <p>Add Letters to display box</p>
-            <form onSubmit={handleSubmit}>
+            <form name="add-form" onSubmit={handleSubmit}>
                 <input name="letters-to-add"></input>
                 <button type="submit">Add</button>
             </form>
+            <button onClick={() => {setState("")}}>Reset</button>
             <p>Display: {state}</p>
         </div>
     )
