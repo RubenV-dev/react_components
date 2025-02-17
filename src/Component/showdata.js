@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import getData from './getdata'
 
-const ShowData = () => {
-    const data = getData()
-    console.log(data, typeof(data))
+const  ShowData = () => {
+    let [state, setState] = useState("")
+
+    const handleClick = () => {
+        getData().then(obj => {
+            setState(state = obj.fact)
+        })
+    }
+
     return (
         <div>
-            <p>Showing Get Data</p>
-            {/* <p>${data}</p> */}
+            <button onClick={() => {handleClick()}}>Generate Cat Fact</button>
+            <p>{state}</p>
         </div>
     )
 }
