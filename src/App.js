@@ -5,6 +5,7 @@ import FormBox from './Component/form_box.js';
 import InputAndDisplay from './Component/input_and_display.js';
 import ShowData from './Component/showdata.js';
 import Filter from './Component/filter.js';
+import BackgroundChange from './Component/backgroundChange.js';
 
 function App() {
   return (
@@ -25,12 +26,16 @@ function App() {
           <InputAndDisplay/>
         </div>
         <div className="component">
-          <h2>Show Data</h2>
+          <h2>Show Cat Facts</h2>
           <ShowData/>
         </div>
         <div className="component">
-          <h2>Filter Practice</h2>
+          <h2>Vegetable Fruit Filter</h2>
           <Filter/>
+        </div>
+        <div className="component">
+          <h2>Background Color Changer</h2>
+          <BackgroundChange/>
         </div>
       </header>
     </div>
